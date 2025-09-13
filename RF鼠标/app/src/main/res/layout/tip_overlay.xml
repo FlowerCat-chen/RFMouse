@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:id="@+id/linear_a"
+	android:gravity="center_vertical|center_horizontal">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:padding="20dp"
+		android:text="请找到 ●按键模拟鼠标，并开启辅助功能权限。"
+		android:textSize="18sp"
+		android:background="#FFEDFF09"
+		android:textColor="#FF7303FF"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="20dp"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="点击屏幕任意处关闭提示。"
+			android:textColor="#FFFF8500"
+			android:background="#FF6EF4FF"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

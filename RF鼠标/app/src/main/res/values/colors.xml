@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="selected_item_color">#FFFF9B07</color> 
+	<color name="transparent">#00000080</color>
+	<color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="button_normal_bg">#F0F0F0</color>
+    <color name="button_pressed_bg">#E0E0E0</color>
+    <color name="button_focused_bg">#90CAF9</color>
+    <color name="button_text_color">#333333</color>
+
+    <color name="switch_track_tint">#BDBDBD</color>
+    <color name="switch_thumb_tint">#FFFFFF</color>
+    <color name="seekbar_progress_tint">@color/colorPrimary</color>
+    <color name="seekbar_thumb_tint">@color/colorPrimaryDark</color>
+</resources>
+
+
