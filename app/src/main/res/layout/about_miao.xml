@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="9dp"
+		android:background="@android:color/white">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center_horizontal"
+			android:paddingBottom="16dp">
+
+			<ImageView
+				android:id="@+id/iv_app_icon"
+				android:layout_width="64dp"
+				android:layout_height="64dp"
+				android:src="@drawable/ic_launcher"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="RF鼠标"
+				android:textSize="20sp"
+				android:textColor="@android:color/black"
+				android:layout_marginTop="8dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="版本 1.3.0"
+				android:textSize="14sp"
+				android:layout_marginTop="4dp"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@android:color/darker_gray"
+			android:padding="16dp"
+			android:layout_marginBottom="16dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="开发者信息"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"
+				android:layout_marginBottom="8dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="开发者：三色花瓣喵(我永远喜欢kemonomimigirl)\n邮箱：kemonomimi666@qq.com"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="使用的开源项目"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"
+				android:layout_marginBottom="8dp"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="项目名称：app_process-shell-use"
+				android:layout_marginBottom="4dp"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="许可证：MIT"/>
+
+			<TextView
+				android:id="@+id/tv_project_url"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="https://github.com/gtf35/app_process-shell-use"
+				android:textColor="@android:color/holo_blue_dark"
+				android:autoLink="web"
+				android:linksClickable="true"
+				android:textIsSelectable="true"
+				android:layout_marginTop="4dp"
+				android:layout_marginBottom="16dp"/>
+
+		</LinearLayout>
+		
+		
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="项目名称：scrcpy"
+				android:layout_marginBottom="4dp"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="许可证：Apache-2.0"/>
+
+			<TextView
+				android:id="@+id/tv_project_url_1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="https://github.com/Genymobile/scrcpy"
+				android:textColor="@android:color/holo_blue_dark"
+				android:autoLink="web"
+				android:linksClickable="true"
+				android:textIsSelectable="true"
+				android:layout_marginTop="4dp"
+				android:layout_marginBottom="16dp"/>
+
+		</LinearLayout>
+		
+		
+
+	</LinearLayout>
+
+</ScrollView>
+

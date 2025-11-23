@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#f5f5f5"
+	android:padding="8dp">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical">
+		
+		
+	<TextView
+		android:id="@+id/titleText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="鼠标快速设置"
+		android:textSize="24sp"
+		android:textColor="#333333"
+		android:textStyle="bold"
+		android:gravity="center"
+		android:layout_marginBottom="20dp"
+		android:layout_marginTop="10dp"/>
+
+	<LinearLayout
+		android:id="@+id/stepIndicator"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:layout_marginBottom="20dp">
+
+		<TextView
+			android:id="@+id/step1"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:text="1"
+			android:textColor="#ffffff"
+			android:background="@drawable/step_indicator_active"
+			android:textSize="14sp"/>
+
+		<View
+			android:layout_width="20dp"
+			android:layout_height="2dp"
+			android:background="#cccccc"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:id="@+id/step2"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:text="2"
+			android:textColor="#666666"
+			android:background="@drawable/step_indicator_inactive"
+			android:textSize="14sp"/>
+
+		<View
+			android:layout_width="20dp"
+			android:layout_height="2dp"
+			android:background="#cccccc"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:id="@+id/step3"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:text="3"
+			android:textColor="#666666"
+			android:background="@drawable/step_indicator_inactive"
+			android:textSize="14sp"/>
+
+		<View
+			android:layout_width="20dp"
+			android:layout_height="2dp"
+			android:background="#cccccc"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:id="@+id/step4"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:text="4"
+			android:textColor="#666666"
+			android:background="@drawable/step_indicator_inactive"
+			android:textSize="14sp"/>
+
+		<View
+			android:layout_width="20dp"
+			android:layout_height="2dp"
+			android:background="#cccccc"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:id="@+id/step5"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:text="5"
+			android:textColor="#666666"
+			android:background="@drawable/step_indicator_inactive"
+			android:textSize="14sp"/>
+
+		<View
+			android:layout_width="20dp"
+			android:layout_height="2dp"
+			android:background="#cccccc"
+			android:layout_gravity="center"/>
+
+		<TextView
+			android:id="@+id/step6"
+			android:layout_width="30dp"
+			android:layout_height="30dp"
+			android:gravity="center"
+			android:text="6"
+			android:textColor="#666666"
+			android:background="@drawable/step_indicator_inactive"
+			android:textSize="14sp"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/instructionText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="请按下鼠标切换键"
+		android:textSize="18sp"
+		android:textColor="#666666"
+		android:gravity="center"
+		android:layout_marginBottom="20dp"
+		android:lineSpacingMultiplier="1.2"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:layout_marginBottom="30dp">
+
+		<TextView
+			android:id="@+id/keyDisplay"
+			android:layout_width="60dp"
+			android:layout_height="60dp"
+			android:gravity="center"
+			android:text="？"
+			android:textSize="10sp"
+			android:textColor="#ffffff"
+			android:background="@drawable/key_display_bg"
+			android:textStyle="bold"/>
+
+		<TextView
+			android:id="@+id/keyNameText"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="等待按键..."
+			android:textSize="16sp"
+			android:textColor="#999999"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginBottom="30dp">
+
+		<TextView
+			android:id="@+id/countdownText"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="10秒"
+			android:textSize="16sp"
+			android:textColor="#ff6b35"
+			android:gravity="center"
+			android:layout_marginBottom="5dp"/>
+
+		<ProgressBar
+			android:id="@+id/countdownProgress"
+			style="?android:attr/progressBarStyleHorizontal"
+			android:layout_width="match_parent"
+			android:layout_height="8dp"
+			android:progress="100"
+			android:max="100"
+			android:progressDrawable="@drawable/progress_bar"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:gravity="center">
+
+		<Button
+			android:id="@+id/prevButton"
+			android:layout_width="0dp"
+			android:layout_height="48dp"
+			android:layout_weight="1"
+			android:text="上一个"
+			android:textSize="16sp"
+			android:background="@drawable/button_background_selector"
+			android:textColor="#666666"
+			android:layout_marginEnd="8dp"/>
+
+		<Button
+			android:id="@+id/nextButton"
+			android:layout_width="0dp"
+			android:layout_height="48dp"
+			android:layout_weight="1"
+			android:text="下一个"
+			android:textSize="16sp"
+			android:background="@drawable/button_background_selector"
+			android:textColor="#ffffff"
+			android:layout_marginStart="8dp"/>
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/exitButton"
+		android:layout_width="match_parent"
+		android:layout_height="48dp"
+		android:text="退出"
+		android:textSize="16sp"
+		android:background="@drawable/button_background_selector"
+		android:textColor="#666666"
+		android:layout_marginTop="10dp"/>
+	
+	</LinearLayout>
+</ScrollView>
+

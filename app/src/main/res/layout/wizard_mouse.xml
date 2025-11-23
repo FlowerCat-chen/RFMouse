@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#f5f5f5"
+	android:scrollbars="vertical">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="16dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="初次使用向导"
+			android:textSize="15sp"
+			android:textColor="#333333"
+			android:textStyle="bold"
+			android:gravity="center"
+			android:layout_marginBottom="10dp"
+			android:padding="10dp"
+			android:background="#ffffff"
+			android:elevation="2dp"/>
+
+		<TextView
+			android:id="@+id/step_title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="用户协议"
+			android:textSize="15sp"
+			android:textColor="#2196F3"
+			android:textStyle="bold"
+			android:gravity="center"
+			android:layout_marginBottom="12dp"
+			android:padding="12dp"
+			android:background="#ffffff"
+			android:elevation="1dp"/>
+
+		<LinearLayout
+			android:id="@+id/content_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="#ffffff"
+			android:padding="16dp"
+			android:elevation="2dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="16dp"
+			android:weightSum="2">
+
+			<Button
+				android:id="@+id/btn_previous"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="上一步"
+				android:layout_marginEnd="8dp"
+				android:background="@drawable/button_background_selector"
+				android:textColor="#ffffff"/>
+
+			<Button
+				android:id="@+id/btn_next"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="下一步"
+				android:layout_marginStart="8dp"
+				android:background="@drawable/button_background_selector"
+				android:textColor="#ffffff"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+

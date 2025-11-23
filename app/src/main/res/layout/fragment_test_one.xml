@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="16dp">
+
+	<TextView
+		android:id="@+id/status_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:text="短按测试: 请按顺序点击按钮 1, 2, 3"
+		android:gravity="center"
+		android:paddingBottom="16dp"/>
+
+	<RelativeLayout
+		android:layout_width="320dp"
+		android:layout_height="320dp"
+		android:layout_centerInParent="true"
+		android:id="@+id/button_area">
+
+		<Button
+			android:id="@+id/button1"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:text="1"
+			android:textSize="30sp"
+			android:alpha="0.8"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentLeft="true"/>
+
+		<Button
+			android:id="@+id/button2"
+			android:layout_width="160dp"
+			android:layout_height="160dp"
+			android:text="2"
+			android:textSize="30sp"
+			android:alpha="0.8"
+			android:layout_centerVertical="true"
+			android:layout_alignParentRight="true"/>
+
+		<Button
+			android:id="@+id/button3"
+			android:layout_width="120dp"
+			android:layout_height="120dp"
+			android:text="3"
+			android:textSize="30sp"
+			android:alpha="0.8"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true"/>
+
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentBottom="true"
+		android:gravity="center_horizontal">
+
+		<Button
+			android:id="@+id/pass_button"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="通过"
+			android:layout_marginRight="8dp"
+			android:background="@drawable/button_background_selector"/>
+
+		<Button
+			android:id="@+id/fail_button"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="不通过"
+			android:layout_marginRight="8dp"
+			android:background="@drawable/button_background_selector"/>
+
+		<Button
+			android:id="@+id/mode_change_button"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="点击模式"
+			android:layout_marginRight="8dp"
+			android:background="@drawable/button_background_selector"/>
+		
+		
+		<Button
+			android:id="@+id/exit_button"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="退出"
+			android:background="@drawable/button_background_selector"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
+

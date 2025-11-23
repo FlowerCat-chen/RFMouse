@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp">
+
+		<EditText
+			android:id="@+id/search_edittext"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="搜索应用..."
+			android:padding="10dp"
+			android:background="@drawable/button_background_selector"
+			android:singleLine="true"
+			android:imeOptions="actionSearch"/>
+
+	</LinearLayout>
+
+	<ListView
+		android:id="@+id/app_list"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fastScrollEnabled="true"
+		android:scrollingCache="false"
+		android:listSelector="@drawable/list_item_selector"
+		android:padding="10dp"/>
+
+</LinearLayout>
+
