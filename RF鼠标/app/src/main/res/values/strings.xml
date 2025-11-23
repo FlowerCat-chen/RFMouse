@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RF鼠标</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="accessibility_service_label">●按键模拟鼠标服务</string>
+	<string name="accessibility_service_description">此服务用于模拟鼠标。</string>
+
+</resources>

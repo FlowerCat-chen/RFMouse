@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/permissions_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="8dp"
+        android:background="#f8f8f8" />
+
+    <Button
+        android:id="@+id/btn_grant_permissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="授予权限"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_selector"
+        android:textColor="#ffffff"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp" />
+	
+	<Button
+        android:id="@+id/btn_skip_permissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="稍后用adb授权"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background_selector"
+        android:textColor="#ffffff"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp" />
+
+</LinearLayout>

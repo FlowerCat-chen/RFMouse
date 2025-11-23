@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="#f5f5f5"
+	android:padding="8dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Shell通信"
+			android:textSize="24sp"
+			android:textColor="#333333"
+			android:textStyle="bold"
+			android:gravity="center"
+			android:layout_marginBottom="20dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@drawable/dialog_background"
+			android:padding="16dp"
+			android:layout_marginBottom="20dp">
+
+			<TextView
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:text="连接状态:"
+				android:textSize="16sp"
+				android:textColor="#666666"/>
+
+			<TextView
+				android:id="@+id/tvStatus"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="未连接"
+				android:textSize="16sp"
+				android:textColor="#ff4444"
+				android:textStyle="bold"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/dialog_background"
+			android:padding="16dp"
+			android:layout_marginBottom="20dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="服务器配置"
+				android:textSize="18sp"
+				android:textColor="#333333"
+				android:textStyle="bold"
+				android:layout_marginBottom="12dp"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="地址:"
+					android:textSize="14sp"
+					android:textColor="#666666"
+					android:layout_gravity="center_vertical"/>
+
+				<EditText
+					android:id="@+id/etHost"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="localhost"
+					android:textSize="14sp"
+					android:background="@drawable/edittext_bg"
+					android:padding="8dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="端口:"
+					android:textSize="14sp"
+					android:textColor="#666666"
+					android:layout_gravity="center_vertical"
+					android:layout_marginTop="10dp"/>
+
+				<EditText
+					android:id="@+id/etPort"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="4521"
+					android:textSize="14sp"
+					android:inputType="number"
+					android:background="@drawable/edittext_bg"
+					android:padding="8dp"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="200dp"
+			android:orientation="vertical"
+			android:background="@drawable/dialog_background"
+			android:padding="16dp"
+			android:layout_marginBottom="20dp">
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="消息记录"
+				android:textSize="18sp"
+				android:textColor="#333333"
+				android:textStyle="bold"
+				android:layout_marginBottom="12dp"/>
+
+			<ScrollView
+				android:id="@+id/msgscrollView"
+				android:layout_width="match_parent"
+				android:layout_height="0dp"
+				android:layout_weight="1"
+				android:padding="8dp"
+				android:background="@drawable/background_gradient"
+				android:scrollbars="vertical">
+
+				<TextView
+					android:id="@+id/tvMessages"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:text="等待连接..."
+					android:textSize="14sp"
+					android:textColor="#FFFFFFFF"
+					android:lineSpacingExtra="4dp"/>
+
+			</ScrollView>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/etMessage"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_marginEnd="12dp"
+				android:hint="输入要发送的消息..."
+				android:textSize="14sp"
+				android:background="@drawable/edittext_bg"
+				android:padding="12dp"/>
+
+			<Button
+				android:id="@+id/btnSend"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="发送"
+				android:textSize="14sp"
+				android:background="@drawable/button_background_selector"
+				android:textColor="#ffffff"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:enabled="false"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="16dp">
+
+			<Button
+				android:id="@+id/btnConnect"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:layout_marginEnd="8dp"
+				android:text="连接服务器"
+				android:textSize="16sp"
+				android:background="@drawable/button_background_selector"
+				android:textColor="#ffffff"/>
+
+			<Button
+				android:id="@+id/btnDisconnect"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:layout_marginStart="8dp"
+				android:text="断开连接"
+				android:textSize="16sp"
+				android:background="@drawable/button_background_selector"
+				android:textColor="#ffffff"
+				android:enabled="false"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+

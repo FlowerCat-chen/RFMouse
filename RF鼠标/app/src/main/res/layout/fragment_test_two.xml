@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp">
+
+	<TextView
+		android:id="@+id/status_text_two"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		android:text="请按顺序滑动 ScrollView 上下左右"
+		android:gravity="center"
+		android:paddingBottom="16dp"
+		android:layout_marginBottom="10dp"/>
+
+	<ScrollView
+		android:id="@+id/vertical_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="#eeeeee"
+		android:layout_marginBottom="8dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="垂直滚动区域\n\n\n请尝试向上滚动\n\n\n\n\n然后尝试向下滚动\n\n\n\n\n(内容足够长，确保滚动条出现)\n\n\n\n\n--- 底部 ---"
+			android:textSize="20sp"
+			android:padding="10dp"/>
+
+	</ScrollView>
+
+	<HorizontalScrollView
+		android:id="@+id/horizontal_scroll_view"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:background="#cccccc">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:text="水平滚动区域        请尝试向左滚动        然后尝试向右滚动        内容需要足够长才能滚动        内容需要足够长才能滚动        内容需要足够长才能滚动"
+			android:textSize="20sp"
+			android:padding="10dp"
+			android:maxLines="1"
+			android:singleLine="true"/>
+
+	</HorizontalScrollView>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_alignParentBottom="true"
+		android:gravity="center_horizontal"
+		android:layout_marginTop="10dp">
+
+		<Button
+			android:id="@+id/pass_button2"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="通过"
+			android:layout_marginRight="8dp"
+			android:background="@drawable/button_background_selector"/>
+
+		<Button
+			android:id="@+id/fail_button2"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="不通过/重试"
+			android:layout_marginRight="8dp"
+			android:background="@drawable/button_background_selector"/>
+
+		<Button
+			android:id="@+id/exit_button2"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="wrap_content"
+			android:text="退出"
+			android:background="@drawable/button_background_selector"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

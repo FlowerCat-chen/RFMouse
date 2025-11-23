@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:elevation="2dp"
+	android:focusable="false">
+
+    <!-- 新增内层 LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@drawable/rounded_card_background"
+        android:foreground="@drawable/list_item_selector2"
+		android:focusable="false">
+
+        <!-- 单选按钮 -->
+        <RadioButton
+            android:id="@+id/radio_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" 
+			android:focusable="false"/>
+
+        <!-- 配置信息 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical"
+			android:focusable="false">
+
+            <!-- 配置名称（单行滚动） -->
+            <TextView
+                android:id="@+id/tv_config_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="配置名称"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="false"/>
+
+            <!-- 文件信息（单行滚动） -->
+            <TextView
+                android:id="@+id/tv_config_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="文件信息"
+                android:textSize="12sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="false"/>
+
+        </LinearLayout>
+
+        <!-- 导出按钮 -->
+        <Button
+            android:id="@+id/btn_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="导出"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+			android:focusable="false"
+            android:background="@drawable/button_background_selector"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+

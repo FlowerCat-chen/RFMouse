@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/status_text_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="请点击拖动条上方的标记点"
+        android:gravity="center"
+        android:paddingBottom="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/seekbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp">
+
+        <View
+            android:id="@+id/target_mark"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:background="#FF0000"
+            android:layout_marginTop="5dp"
+            android:visibility="invisible" /> <SeekBar
+            android:id="@+id/test_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/target_mark"
+            android:layout_marginTop="-15dp" /> </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="*注意: 拖动条自身不能拖动，只能通过点击上方标记来测试鼠标精度。"
+        android:gravity="center"
+        android:paddingTop="50dp"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#f0f0f0"
+	tools:context=".MainActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="8dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/tip_container"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:padding="4dp"
+			android:background="@drawable/rounded_info_background">
+
+			<Button
+				android:id="@+id/exit_mouse_setting"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="退出"
+				android:background="@drawable/button_background_selector"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@android:color/white"
+			android:padding="16dp"
+			android:layout_marginBottom="16dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="通用设置"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:textColor="@android:color/black"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:background="#E0E0E0"
+				android:layout_marginTop="16dp"
+				android:gravity="center"
+				android:padding="8dp"
+				android:orientation="horizontal"
+				android:spacing="16dp">
+
+				<LinearLayout
+					android:id="@+id/preview_container_layout"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:gravity="center">
+
+					<ImageView
+						android:id="@+id/iv_preview_mouse"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@android:drawable/ic_menu_edit"
+						android:adjustViewBounds="true"
+						android:maxWidth="60dp"
+						android:maxHeight="60dp"/>
+
+					<ImageView
+						android:id="@+id/iv_preview_mouse_scroll"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@android:drawable/ic_menu_edit"
+						android:adjustViewBounds="true"
+						android:maxWidth="60dp"
+						android:maxHeight="60dp"
+						android:layout_marginLeft="30dp"/>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="选择预设大小"
+				android:layout_marginTop="16dp"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:gravity="center_vertical"
+				android:layout_marginTop="8dp">
+
+				<RadioGroup
+					android:id="@+id/rg_mouse_size"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<RadioButton
+						android:id="@+id/rb_small"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="小"
+						android:layout_marginRight="10dp"
+						android:background="@drawable/button_background_selector"/>
+
+					<RadioButton
+						android:id="@+id/rb_medium"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="中"
+						android:checked="true"
+						android:layout_marginRight="10dp"
+						android:background="@drawable/button_background_selector"/>
+
+					<RadioButton
+						android:id="@+id/rb_large"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="大"
+						android:background="@drawable/button_background_selector"/>
+
+				</RadioGroup>
+
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="自定义尺寸(1～100%)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett1">
+
+				<SeekBar
+					android:id="@+id/sb_custom_size"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_custom_size_value"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="100"/>
+
+				<TextView
+					android:id="@+id/tv_custom_size_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<Button
+				android:id="@+id/btn_select_image"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="选择鼠标图片"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+			<Button
+				android:id="@+id/btn_reset_image"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="重置为默认图片"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+			<Button
+				android:id="@+id/btn_select_image_scroll"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="选择鼠标滚动图片"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+			<Button
+				android:id="@+id/btn_reset_image_scroll"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="重置为默认滚动图片"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="鼠标单次移动距离(1～60)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett2">
+
+				<SeekBar
+					android:id="@+id/seek_bar_step"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_step_value"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="60"/>
+
+				<TextView
+					android:id="@+id/tv_step_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="鼠标移动速率(1～100)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett3">
+
+				<SeekBar
+					android:id="@+id/seek_bar_speed"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_speed_value"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="100"/>
+
+				<TextView
+					android:id="@+id/tv_speed_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="鼠标移动间隔时间(5～100ms)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett4">
+
+				<SeekBar
+					android:id="@+id/seek_bar_interval"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_interval_value"
+					android:layout_centerVertical="true"
+					android:min="5"
+					android:max="100"/>
+
+				<TextView
+					android:id="@+id/tv_interval_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="鼠标自动隐藏时间(3～100s)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett5">
+
+				<SeekBar
+					android:id="@+id/seek_bar_hide_time"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_hide_time_value"
+					android:layout_centerVertical="true"
+					android:min="3"
+					android:max="100"/>
+
+				<TextView
+					android:id="@+id/tv_hide_time_value"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett6"
+				android:layout_marginTop="16dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="鼠标自动隐藏"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/auto_hide_enabled"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<Button
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="鼠标显示规则"
+				android:id="@+id/btn_lay_setting"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+			<Button
+				android:id="@+id/btn_set_default"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="重置所有设置"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#ccc"
+			android:layout_marginTop="16dp"
+			android:layout_marginBottom="16dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@android:color/white"
+			android:padding="16dp"
+			android:layout_marginBottom="16dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="选择鼠标工作模式"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:textColor="@android:color/black"
+				android:layout_marginBottom="15dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="安卓版本小于7则无法使用手势分发"
+				android:textSize="16sp"/>
+
+			<RadioGroup
+				android:id="@+id/rg_options"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<RadioButton
+					android:id="@+id/rb_gesture"
+					style="@style/OptionRadioButton"
+					android:text="手势分发 (无限制)"/>
+
+				<RadioButton
+					android:id="@+id/rb_node_click"
+					style="@style/OptionRadioButton"
+					android:text="节点点击 (有限制)"/>
+
+				<RadioButton
+					android:id="@+id/rb_mgr_click"
+					style="@style/OptionRadioButton"
+					android:text="触摸注入(无限制)"/>
+
+			</RadioGroup>
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginTop="10dp"
+				android:background="#DDDDDD"/>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical"
+				android:gravity="center">
+
+				<Button
+					android:id="@+id/btn_mgrsetting"
+					style="@style/ActionPrimaryButton"
+					android:text="触摸注入设置"/>
+
+				<Button
+					android:id="@+id/btn_show_limitations"
+					style="@style/ActionPrimaryButton"
+					android:text="告诉我限制是什么？"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<View
+			android:id="@+id/gesture_1"
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#ccc"
+			android:layout_marginTop="16dp"
+			android:layout_marginBottom="16dp"/>
+
+		<LinearLayout
+			android:id="@+id/gesture_2"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@android:color/white"
+			android:padding="16dp"
+			android:layout_marginBottom="16dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="手势分发设置"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:textColor="@android:color/black"
+				android:layout_marginBottom="15dp"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="短按时长(1～300ms)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett7">
+
+				<SeekBar
+					android:id="@+id/gesture_short_time"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_gesture_short_time"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="300"/>
+
+				<TextView
+					android:id="@+id/tv_gesture_short_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="长按时长(1～10s)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett8">
+
+				<SeekBar
+					android:id="@+id/gesture_long_time"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_gesture_long_time"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="10"/>
+
+				<TextView
+					android:id="@+id/tv_gesture_long_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="滚动时长(1～2000ms)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/scroll_dur">
+
+				<SeekBar
+					android:id="@+id/scroll_time"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_scroll_time"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="2000"/>
+
+				<TextView
+					android:id="@+id/tv_scroll_time"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="上下滑动距离(%屏幕高)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett9">
+
+				<SeekBar
+					android:id="@+id/scroll_updown_dis"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_scroll_updown_dis"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="100"/>
+
+				<TextView
+					android:id="@+id/tv_scroll_updown_dis"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="左右滑动距离(%屏幕宽)"
+				android:layout_marginTop="16dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:clickable="true"
+				android:focusable="true"
+				android:gravity="center_vertical|center_horizontal"
+				android:id="@+id/sett10">
+
+				<SeekBar
+					android:id="@+id/scroll_leftright_dis"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="8dp"
+					android:thumb="@drawable/large_thumb"
+					android:layout_toLeftOf="@+id/tv_scroll_leftright_dis"
+					android:layout_centerVertical="true"
+					android:min="1"
+					android:max="100"/>
+
+				<TextView
+					android:id="@+id/tv_scroll_leftright_dis"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:text="0"
+					android:layout_marginLeft="8dp"
+					android:textSize="16sp"/>
+
+			</RelativeLayout>
+
+			<Button
+				android:id="@+id/btn_gesture_default"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="重置手势设置"
+				android:layout_marginTop="16dp"
+				android:background="@drawable/button_background_selector"/>
+
+		</LinearLayout>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#ccc"
+			android:layout_marginTop="16dp"
+			android:layout_marginBottom="16dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@android:color/white"
+			android:padding="16dp"
+			android:layout_marginBottom="16dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="高级选项"
+				android:textSize="20sp"
+				android:textStyle="bold"
+				android:textColor="@android:color/black"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett11"
+				android:layout_marginTop="16dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="息屏后鼠标回正"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/lock_auto_back"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett12"
+				android:layout_marginTop="16dp">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="阻止屏幕休眠"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/keep_screen_on"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="开启x轴修正(如果点击坐标偏右请关闭此项)"
+				android:textSize="16sp"
+				android:layout_marginTop="8dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett13">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="x修正"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/fix_x"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="开启y轴修正(如果点击坐标偏下请关闭此项)"
+				android:textSize="16sp"
+				android:layout_marginTop="8dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett14">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="y修正"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/fix_y"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="绘制红/绿框"
+				android:textSize="16sp"
+				android:layout_marginTop="8dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett16">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="Debug模式"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/click_debug"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="&gt;=安卓5生效"
+				android:textSize="16sp"
+				android:layout_marginTop="8dp"/>
+
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="8dp"
+				android:layout_marginBottom="8dp"
+				android:background="@drawable/item_background"
+				android:focusable="true"
+				android:clickable="true"
+				android:id="@+id/sett17">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:text="输入时空出按键"
+					android:textSize="16sp"
+					android:textColor="@android:color/black"/>
+
+				<Switch
+					android:id="@+id/space_input"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_alignParentEnd="true"
+					android:layout_centerVertical="true"
+					android:minWidth="60dp"
+					android:minHeight="40dp"/>
+
+			</RelativeLayout>
+
+			<Button
+				android:id="@+id/btn_advance_default"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="重置高级设置"
+				android:background="@drawable/button_background_selector"
+				android:layout_marginTop="8dp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+

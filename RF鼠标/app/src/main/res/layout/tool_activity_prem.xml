@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="5dp">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="6dp"
+		android:gravity="center_vertical|center_horizontal">
+
+		<TextView
+			android:id="@+id/package_name_text_view"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="10sp"
+			android:textStyle="bold"
+			android:maxLines="1"
+			android:ellipsize="end"
+			android:maxEms="10"/>
+
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="right">
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="授予浮窗/辅助/设备管理"
+				android:textSize="10sp"
+				android:layout_marginRight="4dp"
+				android:background="@drawable/button_background_selector"
+				android:id="@+id/bt_onclick_prem"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/special_permissions_text_view"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textSize="16sp"
+		android:textStyle="italic"
+		android:textColor="#FF0000"
+		android:layout_marginBottom="2dp"/>
+
+	<ListView
+		android:id="@+id/permissions_list_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:listSelector="@drawable/list_item_selector"/>
+
+</LinearLayout>
+

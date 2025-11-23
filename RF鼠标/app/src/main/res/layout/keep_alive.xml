@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="9dp"
+		android:background="@android:color/white">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/rl_alive_service">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="保活服务(耗电↑)"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"
+				android:id="@+id/alive_service"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/rl_bind_noti">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="通知使用保活"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"
+				android:id="@+id/bind_noti"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/rl_bind_setting">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="快捷设置保活(&gt;=安卓7)"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+

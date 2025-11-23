@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@android:color/white">
+
+	<LinearLayout
+		android:id="@+id/settings_container"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="16dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/l1">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="关闭键盘灯"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:id="@+id/switch_1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/l2">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="开机打开wifi"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:id="@+id/switch_2"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/l3">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="开机打开鼠标"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:id="@+id/switch_3"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/l4">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="按键映射提示"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"
+				android:id="@+id/switch_4"/>
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/l5">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="主页键锁屏/关机"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<Switch
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"
+				android:id="@+id/switch_5"/>
+
+		</RelativeLayout>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="按键长按判定(1～2000ms)"
+			android:layout_marginTop="16dp"/>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:background="@drawable/item_background"
+			android:clickable="true"
+			android:focusable="true"
+			android:gravity="center_vertical|center_horizontal"
+			android:id="@+id/long_click_judge">
+
+			<SeekBar
+				android:id="@+id/seek_bar_judge"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="8dp"
+				android:thumb="@drawable/large_thumb"
+				android:layout_toLeftOf="@+id/tv_long_click_judge"
+				android:layout_centerVertical="true"
+				android:min="1"
+				android:max="2000"/>
+
+			<TextView
+				android:id="@+id/tv_long_click_judge"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:text="0"
+				android:layout_marginLeft="8dp"
+				android:textSize="16sp"/>
+
+		</RelativeLayout>
+		
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="8dp"
+			android:layout_marginBottom="8dp"
+			android:background="@drawable/item_background"
+			android:focusable="true"
+			android:clickable="true"
+			android:id="@+id/rl_keep_alive"
+			android:layout_marginTop="16dp">
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerVertical="true"
+				android:text="应用保活"
+				android:textSize="16sp"
+				android:textColor="@android:color/black"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentEnd="true"
+				android:layout_centerVertical="true"
+				android:minWidth="60dp"
+				android:minHeight="40dp"
+				android:text="&gt;"
+				android:gravity="center_vertical|center_horizontal"/>
+
+		</RelativeLayout>
+		
+		
+		
+		
+
+	</LinearLayout>
+
+</ScrollView>
+

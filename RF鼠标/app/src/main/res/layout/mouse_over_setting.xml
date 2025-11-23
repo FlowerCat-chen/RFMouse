@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="10dp">
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="8dp"
+		android:background="#FF95CFFE">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="短/长按列表编辑"
+			android:textColor="#FF000000"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/cnt1"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/tip_container"
+		android:orientation="horizontal"
+		android:gravity="center"
+		android:padding="4dp"
+		android:background="#FF9BF1FF">
+
+		<Button
+			android:id="@+id/add_app_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="添加应用"
+			android:background="@drawable/button_background_selector"/>
+
+		<Button
+			android:id="@+id/clear_app_button"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="清空"
+			android:background="@drawable/button_background_selector"
+			android:layout_marginLeft="10dp"/>
+
+	</LinearLayout>
+
+	
+	
+	<ListView
+		android:id="@+id/added_app_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/cnt1"
+		android:dividerHeight="5dp"
+		android:scrollbars="none"
+		android:fadeScrollbars="false"
+		android:listSelector="@drawable/list_item_selector"/>
+	
+
+</LinearLayout>
+

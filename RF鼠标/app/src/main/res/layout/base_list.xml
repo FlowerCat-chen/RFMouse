@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/windowBackground" 
+    android:padding="8dp"> 
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="12dp"
+		android:background="@drawable/rounded_info_background" 
+		android:orientation="horizontal"
+        android:elevation="2dp" 
+        android:layout_marginBottom="8dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="使用前请先授权~"
+			android:textSize="14sp" 
+			android:textColor="@color/textPrimary" 
+			android:id="@+id/text_adv"/>
+
+	</LinearLayout>
+
+	<ListView
+		android:id="@+id/main_list_view"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:divider="@android:color/transparent" 
+		android:dividerHeight="12dp" 
+		android:scrollbars="none"
+		android:listSelector="@drawable/list_item_selector"
+		android:padding="4dp"
+        android:clipToPadding="false" 
+        android:layoutAnimation="@anim/list_layout_controller"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:padding="10dp"
+		android:background="@drawable/rounded_author_background" 
+		android:orientation="horizontal"
+        android:elevation="1dp"
+		android:id="@+id/info_linear">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="By 我永远喜欢kemonomimigirl\n(三色花瓣喵）"
+			android:textSize="11sp" 
+			android:textColor="@color/textSecondary"/>
+
+	</LinearLayout>
+
+</LinearLayout>
