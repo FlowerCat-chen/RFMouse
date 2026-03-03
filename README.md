@@ -4,7 +4,8 @@
 
 ![image](https://github.com/FlowerCat-chen/RFMouse/blob/main/img/rf.png)
 
-
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/FlowerCat-chen/RFMouse.svg?variant=adaptive)](https://starchart.cc/FlowerCat-chen/RFMouse)
 
   本应用专门为一些没有触摸屏的安卓按键机与TV打造。应用在屏幕上叠加一层透明的全屏Layout(具体看使用的悬浮窗类型，有可能延伸不到状态栏)，并在里面添加一个自定义视图来绘制鼠标。使用辅助服务来拦截系统按键，并映射为其他功能。对于大于等于安卓7.0的系统，使用手势操作执行点击，对于4.0~6.0的系统，则查找可以点击，滚动，聚焦的视图，并模拟点击。
 
